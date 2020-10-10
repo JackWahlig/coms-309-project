@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'users')}">
+
+<body>
+
+<h2>User</h2>
+<form th:object="${user}" class="form-horizontal" id="add-user-form" method="post">
+    <div class="form-group has-feedback">
+        <input
+                th:replace="~{fragments/inputField :: input ('First Name', 'firstName')}" />
+        <input
+                th:replace="~{fragments/inputField :: input ('Last Name', 'lastName')}" />
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default" type="submit">Add User</button>
+        </div>
+    </div>
+</form>
+</body>

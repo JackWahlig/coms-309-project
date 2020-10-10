@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostgameActivity">
+
+    <TextView
+        android:id="@+id/postgame_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Game Over"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/place_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postgame_title"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="48dp"
+        android:textSize="30dp"
+        android:text="You Placed:"/>
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="20dp"
+        android:text="Score:"/>
+
+    <TextView
+        android:id="@+id/highscore_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place_text"
+        android:layout_toRightOf="@+id/score_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="64dp"
+        android:textSize="20dp"
+        android:text="Highscore:"/>
+
+    <TextView
+        android:id="@+id/shotsfired_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="20dp"
+        android:text="Shots Fired:"/>
+
+    <TextView
+        android:id="@+id/totalshotsfired_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_text"
+        android:layout_toRightOf="@+id/shotsfired_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="52dp"
+        android:textSize="20dp"
+        android:text="Total Shots Fired:"/>
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shotsfired_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="20dp"
+        android:text="Time Lasted:"/>
+
+    <TextView
+        android:id="@+id/xpgained_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="30dp"
+        android:text="EXP Gained:"/>
+
+    <TextView
+        android:id="@+id/xp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xpgained_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="30dp"
+        android:text="EXP:"/>
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/xp_progress"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressBackgroundTint="#dcdcdc"
+        android:progressTint="#03ef00"
+        android:max="100"
+        android:min="0"
+        android:layout_below="@+id/xpgained_text"
+        android:layout_toRightOf="@+id/xp_text"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xp_text"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="30dp"
+        android:text="Level:"/>
+
+    <Button
+        android:id="@+id/bn_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/level_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Back to Home Screen"
+        android:textSize="18dp" />
+
+</RelativeLayout>

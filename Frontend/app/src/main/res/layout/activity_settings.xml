@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Settings"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sound_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_title"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:text="Sound Status (On/Off)"
+        android:textSize="12dp" />
+
+    <Switch
+        android:id="@+id/sound_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_title"
+        android:layout_alignBottom="@id/sound_text"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/sound_text" />
+
+    <TextView
+        android:id="@+id/music_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sound_text"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Music Status (On/Off)"
+        android:textSize="12dp" />
+
+    <Switch
+        android:id="@+id/music_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sound_text"
+        android:layout_alignBottom="@id/music_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@+id/music_text" />
+
+    <TextView
+        android:id="@+id/hints_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/music_text"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Hints (On/Off)"
+        android:textSize="12dp" />
+
+    <Switch
+        android:id="@+id/hints_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/music_text"
+        android:layout_alignBottom="@id/hints_text"
+        android:layout_alignLeft="@+id/music_switch"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/hints_text" />
+
+    <TextView
+        android:id="@+id/colorblind_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hints_text"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Colorblind (On/Off)"
+        android:textSize="12dp" />
+
+    <Switch
+        android:id="@+id/colorblind_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hints_text"
+        android:layout_alignBottom="@id/colorblind_text"
+        android:layout_alignLeft="@+id/music_switch"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/colorblind_text" />
+
+    <Button
+        android:id="@+id/save_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colorblind_switch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Save Settings"/>
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constrained_layout">
+
+    <com.example.crossfire.GamePanel
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:id="@+id/game_panel"
+        tools:ignore="MissingConstraints">
+    </com.example.crossfire.GamePanel>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/health_bar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:text="HP"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_below="@id/constrained_layout"/>
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressBackgroundTint="#ff1900"
+        android:progressTint="#03ef00"
+        android:layout_toRightOf="@id/health_bar_text"
+        android:layout_below="@id/constrained_layout"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        android:min="0"
+        android:max="500"
+        android:progress="500"
+        android:id="@+id/health_bar"/>
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:text="Score"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/health_bar_text"/>
+
+    <TextView
+        android:id="@+id/score_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:text="0"
+        android:textSize="24dp"
+        android:layout_below="@+id/health_bar_text"
+        android:layout_toRightOf="@+id/score_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shield"
+        android:textSize="24dp"
+        android:layout_above="@+id/joystick_left"
+        android:layout_marginLeft="45dp"/>
+
+    <com.example.crossfire.JoystickView
+        android:id="@+id/joystick_left"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gun"
+        android:textSize="24dp"
+        android:layout_above="@+id/joystick_right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"/>
+
+    <com.example.crossfire.JoystickView
+        android:id="@+id/joystick_right"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="1" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'users')}">
+
+<body>
+
+<h2>Find Users</h2>
+
+<form th:object="${user}" th:action="@{/users/find}" method="post"
+      class="form-horizontal" id="search-owner-form">
+    <div class="form-group">
+        <div class="control-group" id="lastNameGroup">
+            <label class="col-sm-2 control-label">Last name </label>
+            <div class="col-sm-10">
+                <input class="form-control" th:field="*{lastName}" size="30"
+                       maxlength="80" /> <span class="help-inline"><div
+                    th:if="${#fields.hasAnyErrors()}">
+              <p th:each="err : ${#fields.allErrors()}" th:text="${err}">Error</p>
+            </div></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Find
+                User</button>
+        </div>
+    </div>
+
+</form>
+
+<br />
+<a class="btn btn-default" th:href="@{/users/new}">Add User</a>
+
+</body>
+</html>

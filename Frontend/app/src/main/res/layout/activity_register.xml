@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create an Account"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:id="@+id/app_title"/>
+
+    <RelativeLayout
+        android:layout_height="350dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/app_title"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Username"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/prompt_reg_user" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/reg_user"
+            android:hint="Username"
+            android:layout_below="@+id/prompt_reg_user"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Enter Password"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/prompt_reg_password"
+            android:layout_below="@+id/reg_user"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="textPassword"
+            android:id="@+id/reg_password"
+            android:layout_below="@+id/prompt_reg_password"
+            android:hint="Password"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Confirm Password"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/prompt_con_password"
+            android:layout_below="@+id/reg_password"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:inputType="textPassword"
+            android:id="@+id/reg_con_password"
+            android:layout_below="@+id/prompt_con_password"
+            android:hint="Password"/>
+
+        <Button
+            android:id="@+id/bn_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reg_con_password"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="0dp"
+            android:text="Submit" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

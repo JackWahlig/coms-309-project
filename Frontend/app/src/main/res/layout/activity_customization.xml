@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".CustomizationActivity">
+
+    <TextView
+        android:id="@+id/customization_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Customization"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/turretSection"
+        android:layout_width="200dp"
+        android:layout_height="623dp"
+        android:layout_below="@+id/customization_title"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/turretText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="Turret Customization"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/red_label_turret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/turretText"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Red Value: "
+            android:textSize="12dp" />
+
+        <SeekBar
+            android:id="@+id/red_value_turret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/turretText"
+            android:layout_alignLeft="@+id/green_value_turret"
+            android:layout_alignBottom="@id/red_label_turret"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/red_label_turret"
+            android:max="255"
+            android:progress="255" />
+
+        <TextView
+            android:id="@+id/green_label_turret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/red_label_turret"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Green Value: "
+            android:textSize="12dp" />
+
+        <SeekBar
+            android:id="@+id/green_value_turret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/red_label_turret"
+            android:layout_alignBottom="@id/green_label_turret"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/green_label_turret"
+            android:max="255"
+            android:progress="255" />
+
+        <TextView
+            android:id="@+id/blue_label_turret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/green_label_turret"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Blue Value: "
+            android:textSize="12dp" />
+
+        <SeekBar
+            android:id="@+id/blue_value_turret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/green_label_turret"
+            android:layout_alignLeft="@id/green_value_turret"
+            android:layout_alignBottom="@id/blue_label_turret"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/blue_label_turret"
+            android:max="255"
+            android:progress="255" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTurret"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/blue_label_turret"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="240dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/colorbox_turret"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/blue_label_turret"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bulletSection"
+        android:layout_width="214dp"
+        android:layout_height="623dp"
+        android:layout_below="@+id/customization_title"
+        android:layout_toRightOf="@+id/turretSection"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/bulletText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="Bullet Customization"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/red_label_bullet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bulletText"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Red Value: "
+            android:textSize="12dp" />
+
+        <SeekBar
+            android:id="@+id/red_value_bullet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bulletText"
+            android:layout_alignLeft="@+id/green_value_bullet"
+            android:layout_alignBottom="@id/red_label_bullet"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/red_label_bullet"
+            android:max="255"
+            android:progress="255" />
+
+        <TextView
+            android:id="@+id/green_label_bullet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/red_label_bullet"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Green Value: "
+            android:textSize="12dp" />
+
+        <SeekBar
+            android:id="@+id/green_value_bullet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/red_label_bullet"
+            android:layout_alignBottom="@id/green_label_bullet"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/green_label_bullet"
+            android:max="255"
+            android:progress="255" />
+
+        <TextView
+            android:id="@+id/blue_label_bullet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/green_label_bullet"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Blue Value: "
+            android:textSize="12dp" />
+
+        <SeekBar
+            android:id="@+id/blue_value_bullet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/green_label_bullet"
+            android:layout_alignLeft="@id/green_value_bullet"
+            android:layout_alignBottom="@id/blue_label_bullet"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/blue_label_bullet"
+            android:max="255"
+            android:progress="255" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBullet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/blue_label_bullet"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="240dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/colorbox_bullet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/blue_label_bullet"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/save_customization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customization_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:text="Save and Set Colors" />
+
+</RelativeLayout>
